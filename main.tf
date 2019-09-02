@@ -561,7 +561,7 @@ resource "aws_elastic_beanstalk_environment" "default" {
   setting {
     namespace = "aws:elb:listener"
     name      = "InstancePort"
-    value     = "${var.application_port}"
+    value     = 80
   }
   setting {
     namespace = "aws:elb:listener"
@@ -576,7 +576,7 @@ resource "aws_elastic_beanstalk_environment" "default" {
   setting {
     namespace = "aws:elb:listener:443"
     name      = "InstancePort"
-    value     = "${var.application_port}"
+    value     = 443
   }
   setting {
     namespace = "aws:elb:listener:443"
@@ -996,7 +996,7 @@ resource "aws_elastic_beanstalk_environment" "default" {
   setting {
     namespace = "aws:elasticbeanstalk:environment:process:default"
     name      = "Port"
-    value     = "${var.application_port}"
+    value     = "80"
   }
   setting {
     namespace = "aws:elasticbeanstalk:environment:process:default"
